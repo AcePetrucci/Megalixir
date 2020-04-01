@@ -1,1 +1,1 @@
-# Elixir-Phoenix-Webpack
+# Megalixir
