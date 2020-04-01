@@ -1,0 +1,12 @@
+/* This file is for your main application css. */
+
+@import "./phoenix.scss";
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/grid/columns.sass";
+@import "bulma/sass/elements/button.sass";
+
+$testColor: transparent;
+
+body {
+    background-color: $testColor;
+}
