@@ -1,2 +1,2 @@
-import './example.page.scss';
-import './components-list';
+import 'App/live/example/example.page.scss';
+import 'App/live/example/components-list';

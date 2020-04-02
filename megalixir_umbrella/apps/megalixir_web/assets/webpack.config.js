@@ -61,7 +61,8 @@ module.exports = (env, options) => ({
   resolve: {
     extensions: [".ts", ",js"],
     alias: {
-      Themes: path.resolve(__dirname, 'scss/themes/')
+      Themes: path.resolve(__dirname, 'scss/themes/'),
+      App: path.resolve(__dirname, '../lib/megalixir_web/')
     }
   },
   plugins: [

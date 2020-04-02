@@ -21,3 +21,6 @@ erl_crash.dump
 
 /assets/node_modules
 /apps/megalixir_web/assets/node_modules/
+
+.elixir_ls
+**/.elixir_ls
