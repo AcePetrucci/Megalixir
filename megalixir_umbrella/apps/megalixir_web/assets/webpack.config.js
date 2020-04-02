@@ -7,7 +7,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
-const entry = glob.sync('../lib/megalixir_web/**/*.component.ts').reduce((acc, curr) => {
+const entry = glob.sync('../lib/megalixir_web/**/*.page.ts').reduce((acc, curr) => {
   return Object.assign(acc, {[path.basename(curr).replace('.ts', '')]: curr})
 }, {['app']: ['./ts/app.ts']});
 

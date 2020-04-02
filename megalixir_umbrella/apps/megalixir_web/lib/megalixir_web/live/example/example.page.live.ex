@@ -3,12 +3,11 @@ defmodule MegalixirWeb.Live.Example do
 
   def render(assigns) do
     ~H"""
-    <link rel="stylesheet" href="/css/example.component.css" />
-    <script src="/js/example.component.js"> </script>
+    <link rel="stylesheet" href="/css/example.page.css" />
+    <script src="/js/example.page.js"> </script>
 
     <section class="example-page">
       <Button text="Generic Button" />
-      <Pannel />
       <ExampleButton />
     </section>
     """
