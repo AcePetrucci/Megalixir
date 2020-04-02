@@ -21,13 +21,3 @@ liveSocket.connect()
 //
 // Local files can be imported directly using relative paths, for example:
 // import socket from "./socket"
-
-
-import { scriptList } from './_duplicatedScripts';
-import { styleList } from './_duplicatedStyles';
-import { removeDuplicates } from './_removeDuplicates';
-
-setTimeout(() => {
-  removeDuplicates(scriptList, 'script');
-  removeDuplicates(styleList, 'link');
-}, 300)
