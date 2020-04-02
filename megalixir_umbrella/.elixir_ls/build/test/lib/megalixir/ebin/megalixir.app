@@ -1,9 +1,0 @@
-{application,megalixir,
-             [{applications,[kernel,stdlib,elixir,logger,runtime_tools,jason,
-                             postgrex,ecto_sql]},
-              {description,"megalixir"},
-              {modules,['Elixir.Megalixir','Elixir.Megalixir.Application',
-                        'Elixir.Megalixir.DataCase','Elixir.Megalixir.Repo']},
-              {registered,[]},
-              {vsn,"0.1.0"},
-              {mod,{'Elixir.Megalixir.Application',[]}}]}.
