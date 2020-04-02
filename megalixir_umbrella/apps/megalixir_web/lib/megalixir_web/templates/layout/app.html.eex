@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
     <%= csrf_meta_tag() %>
   </head>
-  <body>
+  <body class="theme-cargosense">
     <header>
       <section class="container">
         <nav role="navigation">

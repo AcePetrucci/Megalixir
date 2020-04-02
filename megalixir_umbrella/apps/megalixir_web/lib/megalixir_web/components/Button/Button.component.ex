@@ -9,7 +9,7 @@ defmodule Button do
     <link rel="stylesheet" href="/css/Button.component.css" />
     <script src="/js/Button.component.js"> </script>
 
-    <button class="button is-primary" >
+    <button class="button-comp button is-primary" >
       {{ @text }}
     </button>
     """

@@ -1,0 +1,1 @@
+import './Pannel.component.scss';

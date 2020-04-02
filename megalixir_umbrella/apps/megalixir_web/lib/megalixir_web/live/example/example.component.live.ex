@@ -7,6 +7,7 @@ defmodule MegalixirWeb.Live.Example do
     <script src="/js/example.component.js"> </script>
 
     <section class="example-page">
+      <Button text="Generic Button" />
       <Pannel />
       <ExampleButton />
     </section>

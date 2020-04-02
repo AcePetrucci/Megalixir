@@ -1,8 +1,14 @@
-@import 'Themes/cargosense.scss';
+@import 'Themes/themes';
+@import 'Themes/default';
 
+@import './themes/cargosense.theme';
+@import './themes/dhl.theme';
 
-// This below would work, for example.
+.button-comp {
+  border: none;
+  background-color: $primaryButtonColor;
 
-// body {
-//   background-color: $primaryThemeColor;
-// }
+  @include themify($themes) {
+    background-color: themed('primaryButtonColor');
+  }
+}

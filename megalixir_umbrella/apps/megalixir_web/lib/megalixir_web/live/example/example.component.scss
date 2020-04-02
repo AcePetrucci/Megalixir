@@ -1,3 +1,9 @@
-.example-page > button {
+@import 'Themes/themes';
+@import 'Themes/default';
+
+@import './themes/cargosense.theme';
+@import './themes/dhl.theme';
+
+.example-page > .button-comp {
   box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
 }

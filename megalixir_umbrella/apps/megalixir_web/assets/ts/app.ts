@@ -13,9 +13,6 @@ import "phoenix_html"
 import {Socket} from "phoenix"
 import LiveSocket from "phoenix_live_view"
 
-const x: number = 2020;
-console.log(x);
-
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content");
 let liveSocket = new LiveSocket("/live", Socket, {params: {_csrf_token: csrfToken}});
 liveSocket.connect()
@@ -24,3 +21,13 @@ liveSocket.connect()
 //
 // Local files can be imported directly using relative paths, for example:
 // import socket from "./socket"
+
+
+import { scriptList } from './_duplicatedScripts';
+import { styleList } from './_duplicatedStyles';
+import { removeDuplicates } from './_removeDuplicates';
+
+setTimeout(() => {
+  removeDuplicates(scriptList, 'script');
+  removeDuplicates(styleList, 'link');
+}, 300)
