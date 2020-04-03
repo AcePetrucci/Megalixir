@@ -1,0 +1,1 @@
+import './Collapse-Composition-Title.component.scss';

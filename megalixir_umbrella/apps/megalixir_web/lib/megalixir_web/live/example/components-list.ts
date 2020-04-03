@@ -7,11 +7,10 @@
 * Shared Components
 */
 
-import '../../components/Button/Button.component';
+import '../../components/Collapse/Collapse.component';
+import '../../components/Collapse-Composition/Collapse-Composition.component';
 
 
 /**
  * Local Components
  */
-
-import './components/ExampleButton/ExampleButton.component';

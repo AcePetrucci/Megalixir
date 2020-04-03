@@ -1,1 +1,0 @@
-import './ExampleButton.component.scss';
