@@ -1,14 +1,39 @@
 # Megalixir
 
+## Content
+
+- [What?]
+- [Why?]
+- [How?]
+- [Components]
+  - [Components Structure]
+  - [Components Elixir]
+  - [Components Typescript]
+  - [Components Themes]
+- [Pages]
+  - [Pages Structure]
+  - [Pages Elixir]
+  - [Pages Typescript]
+  - [Pages Themes]
+- [Assets]
+  - [Assets Structure]
+  - [Assets Sass]
+  - [Assets Webpack]
+- [Installation and Startup]
+
 ## What?
+[what?]: #what
 
 Megalixir is an attempt to create an Elixir + Phoenix + LiveView structure with modularized CSS/JS. It is built with the aforementioned tools + Surface (which is built based on Phoenix Live Components).
 Each component has its own `[componentName].component.ts` and `[componentName].component.scss` files aside from the `.ex` file.
 
 ## Why?
+[why?]: $why
+
 Because the way Phoenix with webpack currently handles css and js is having them all compiled into one big bundle. There are nothing scoped or even modularized, meaning that in most Elixir/Phoenix apps, you're probably loading way more than you should at any given page.
 
 ## How?
+[how?]: #how
 
 Basically there's 2 key things here. As you can see on the structure just below, inside `/lib/megalixir_web/` there is a `components` folder which houses all `Shared Components`.
 
@@ -50,8 +75,11 @@ The `live` folder is almost exactly the same, but it can also contain its own `c
 ```
 
 ## Components
+[components]: #components
 
-#### Structure
+#### Components Structure
+[components structure]: #components-structure
+
 Following a structure similar to most JS Frameworks (like Angular), here each component must have its own `.scss` and `.ts` files.
 
 ```
@@ -65,7 +93,8 @@ Following a structure similar to most JS Frameworks (like Angular), here each co
 
 It's not required for them to have the `.component.[ext]` name, but it's good for organization and context.
 
-#### Elixir
+#### Components Elixir
+[components elixir]: #components-elixir
 
 Since Megalixir uses `Surface`, here's what a component looks like:
 
@@ -92,7 +121,8 @@ I won't explain exactly how `Surface` works, there's always its own GitHub page,
 
 One thing extremely important: I couldn't find a way to make a truly scoped CSS, so you need to be careful when writing class names. I personally recommend using `RSCSS` and adding a meaningful class name for your component. In this example I'm using `button-comp`, which I definitely won't use anywhere else, unless I plan to modify the component with composition inside another component or feature (using the Atomic Design pattern).
 
-#### Typescript
+#### Components Typescript
+[components typescript]: #components-typescript
 
 Nothing much to say here, since in an Elixir app we really shouldn't be using javascript that much.
 In any case, the `.ts` file is basically so `webpack` can detect the `.scss` file and compile it, but you could also put some typescript code here to do something you can't with Elixir alone (like google maps, for example).
@@ -103,7 +133,8 @@ In any case, the `.ts` file is basically so `webpack` can detect the `.scss` fil
 import './Button.component.scss';
 ```
 
-#### Themes
+#### Components Themes
+[components themes]: #components-themes
 
 Inside the `.scss` file we need to import `Themes/default`. `Themes/themes` is optional, since there are components which just don't need any theme at all aside from the default.
 
@@ -210,8 +241,10 @@ becomes
 
 
 ## Pages
+[pages]: #pages
 
-#### Structure
+#### Pages Structure
+[pages structure]: #pages-structure
 
 Pages works almost exactly the same as a `Component`, except that instead of being called `.component.[ext]`, it must be called `.page.[ext]`.
 
@@ -230,7 +263,8 @@ Also, each page can have its own `/components` folder, which as aforementioned, 
 
 As you can see, there's also a `components-list.ts` file. This is so webpack can know what components (Shared or Featured) are being used by the page.
 
-#### Elixir
+#### Pages Elixir
+[pages elixir]: #pages-elixir
 
 ```elixir
 # example.page.live.ex
@@ -259,7 +293,8 @@ There are 2 things to notice here:
  - We need to include both `<link>` and `<script>` tags inside the render. It's not optimal, but I couldn't find another way to make Elixir include them.
 
 
-#### Typescript
+#### Pages Typescript
+[pages typescript]: #pages-typescript
 
 Just like the `.component.ts`, there's really not much to say about it.
 The only thing is that on the `.page.ts` file you will need to use the `App/` path to import both `.page.scss` and `components-list.ts`.
@@ -294,7 +329,8 @@ import '../../components/Button/Button.component';
 import './components/ExampleButton/ExampleButton.component';
 ```
 
-#### Themes
+#### Pages Themes
+[pages themes]: #pages-themes
 
 Pages' themes works exactly the same as components' themes.
 
@@ -313,8 +349,10 @@ Pages' themes works exactly the same as components' themes.
 ```
 
 ## Assets
+[assets]: #assets
 
-#### Structure
+#### Assets Structure
+[assets structure]: #assets-structure
 
 ```
 /assets
@@ -327,7 +365,8 @@ Pages' themes works exactly the same as components' themes.
   phoenix.scss
 ```
 
-#### Sass
+#### Assets Sass
+[assets sass]: #assets-sass
 
 Not much to say about, the `app.scss` is where you should place global style changes (usually targeting the body, or the classic `*, *::before, *::after { box-sizing: border-box; }`).
 
@@ -403,7 +442,8 @@ $themes: map-merge($cargoSenseTheme, $dhlTheme);
 }
 ```
 
-#### Webpack
+#### Assets Webpack
+[assets webpack]: #assets-webpack
 
 Not much to say here too, basically the `entry` constant makes webpack to search the entire project for the `.page.ts` files (which includes all `.component.ts` used by that page) and generate a new entry for each page found.
 
@@ -433,6 +473,7 @@ module.exports = (env, options) => ({
 ```
 
 ## Installation and Startup
+[installation and startup]: #installation-and-startup
 
 ```bash
 # Install Elixir deps
