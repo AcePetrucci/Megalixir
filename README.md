@@ -488,3 +488,9 @@ $ npm i
 # /megalixir_umbrella/
 $ mix phx.server
 ```
+
+## Questions
+
+#### Is Megalixir's name inspired by Final Fantasy?
+
+Definitely.
