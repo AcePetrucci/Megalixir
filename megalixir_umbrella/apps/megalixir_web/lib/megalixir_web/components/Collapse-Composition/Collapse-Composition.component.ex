@@ -3,7 +3,7 @@ defmodule CollapseComposition do
 
   def render(assigns) do
     ~L"""
-    <div class="collapse-comp" data-collapse-composition>
+    <div class="collapse-comp-composition" data-collapse-composition>
       <%= @inner_content.(assigns) %>
     </div>
     """

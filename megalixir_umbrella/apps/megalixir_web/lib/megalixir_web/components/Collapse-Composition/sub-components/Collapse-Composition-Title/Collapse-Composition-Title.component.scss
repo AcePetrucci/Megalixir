@@ -1,0 +1,30 @@
+.collapse-comp-composition {
+  &.-opened {
+    & > .title {
+      &::after {
+        content: '-';
+      }
+    }
+  }
+
+  & > .title {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #1abc9c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  
+    &::after {
+      content: '+';
+      font-size: 36px;
+      top: 50%;
+      font-weight: 400;
+      color: #1abc9c;
+      cursor: pointer;
+    }
+  }
+}
