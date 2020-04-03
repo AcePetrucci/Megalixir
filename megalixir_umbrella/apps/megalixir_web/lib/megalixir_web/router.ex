@@ -7,6 +7,7 @@ defmodule MegalixirWeb.Router do
     plug :fetch_live_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug :put_root_layout, {MegalixirWeb.LayoutView, "app.html"}
   end
 
   pipeline :api do
@@ -16,7 +17,7 @@ defmodule MegalixirWeb.Router do
   scope "/", MegalixirWeb do
     pipe_through :browser
 
-    get "/", ExampleController, :index
+    live "/", Live.Example
   end
 
   # Other scopes may use custom stacks.
