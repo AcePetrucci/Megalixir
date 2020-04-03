@@ -4,7 +4,6 @@ defmodule MegalixirWeb.Live.Example do
   def render(assigns) do
     ~L"""
     <link rel="stylesheet" href="/css/example.page.css" />
-    <script src="/js/example.page.js"> </script>
 
     <section class="example-page">
       <%= live_component(
@@ -28,6 +27,8 @@ defmodule MegalixirWeb.Live.Example do
         <% end %>
       <% end %>
     </section>
+
+    <script src="/js/example.page.js"> </script>
     """
   end
 end
