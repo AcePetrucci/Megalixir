@@ -228,7 +228,7 @@ So the
 becomes
 
 ```css
-// Generated Button css
+/* Generated Button css */
 
 .button-comp {
   border: none;
